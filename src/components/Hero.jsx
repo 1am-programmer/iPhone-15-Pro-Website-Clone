@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { heroVideo, smallHeroVideo } from "../utils";
@@ -10,9 +10,9 @@ const Hero = () => {
 
   const handleVideoSrcSet = () => {
     if (window.innerWidth < 760) {
-      setVideoSrc = { smallHeroVideo };
+      setVideoSrc (smallHeroVideo) ;
     } else {
-      setVideoSrc = { heroVideo };
+      setVideoSrc (heroVideo) ;
     }
   };
   useEffect(() => {
