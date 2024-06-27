@@ -21,6 +21,12 @@ const Features = () => {
         scrub: 5.5,
       },
     });
+    animateWithGsap(".g_text", {
+      y: 0,
+      ease: "power2.inOut",
+      opacity: 1,
+      duration: 1,
+    });
   });
   return (
     <section className="h-full common-padding bg-zinc relative overflow-hidden">
@@ -74,7 +80,24 @@ const Features = () => {
 
               <div className="feature-text-container">
                 <div className="flex-1 flex-center">
-                  <p className="feature-text g_text">iPhone 15 Pro is {"  "}</p>
+                  <p className="feature-text g_text">
+                    iPhone 15 Pro is {"  "}
+                    <span className="text-white">
+                      the first iPhone to feature an aerospace-gray titanium
+                      design,
+                    </span>
+                    using the same alloy that spacecrafts use for missions to
+                    Mars.
+                  </p>
+                </div>
+
+                <div className="flex-1 flex-center">
+                  <p className="feature-text g_text">
+                    Titanium has one of the best strength-to-weight ratios of
+                    any metal,making these our {"  "}
+                    <span className="text-white">lighest Pro models ever.</span>
+                    You'll notice the difference the moment you pick one up.
+                  </p>
                 </div>
               </div>
             </div>
