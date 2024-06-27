@@ -2,6 +2,8 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Highlights from "./components/Highlights";
 import Model from "./components/Model";
+import * as Sentry from "@sentry/react";
+import Features from "./components/Features";
 
 const App = () => {
   return (
@@ -9,9 +11,12 @@ const App = () => {
       <Navbar />
       <Hero />
       <Highlights />
-      <Model/>
+      <Model />
+      <Features/>
     </main>
   );
 };
 
-export default App;
+export default Sentry.withProfiler(App);
+
+// Installed and integrated sentry to monitor loading and click-through rate in our react apple 15 website clone
