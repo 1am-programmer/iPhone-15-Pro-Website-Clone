@@ -19,4 +19,3 @@ const App = () => {
 
 export default Sentry.withProfiler(App);
 
-// Installed and integrated sentry to monitor loading and click-through rate in our react apple 15 website clone
