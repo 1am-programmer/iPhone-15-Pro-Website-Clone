@@ -8,6 +8,17 @@ const Features = () => {
   const videoRef = useRef();
 
   useGSAP(() => {
+    gsap.to("#exploreVideo", {
+      scrollTrigger: {
+        trigger: "#exploreVideo",
+        toggleActions: "play pause reverse restart ",
+        start: "-10% bottom",
+      },
+      onComplete: () => {
+        videoRef.current.play();
+      },
+    });
+
     gsap.to("#features_title", {
       y: 0,
       opacity: 1,
