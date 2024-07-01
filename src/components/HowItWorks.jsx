@@ -1,5 +1,5 @@
 import React from "react";
-import { chipImg } from "../utils";
+import { chipImg, frameImg } from "../utils";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
@@ -22,6 +22,31 @@ const HowItWorks = () => {
       <div className="screen-max-width">
         <div id="chip" className="flex-center my-20 w-full">
           <img src={chipImg} alt="chip" width={180} height={180} />
+        </div>
+
+        <div className="flex flex-col items-center">
+          <h2 className="hiw-title">
+            A17 Pro chip.
+            <br />A monster win for gaming
+          </h2>
+
+          <p className="hiw-subtitle">
+            It's here the biggest redesign in the history of apple's GPU's
+          </p>
+        </div>
+
+        <div className="mt-10 md:mt-20  mb-14">
+          <div className="relative flex-center  h-full">
+            <div className="overflow-hidden">
+              <img
+                src={frameImg}
+                alt="frame"
+                className="bg-transparent relative  z-10"
+              />
+
+              <div className="hiw-video"></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
