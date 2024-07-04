@@ -46,12 +46,12 @@ const HowItWorks = () => {
         </div>
 
         <div className="mt-10 md:mt-20  mb-14">
-          <div className="relative flex-center  h-full">
+          <div className="relative flex-center h-full">
             <div className="overflow-hidden">
               <img
                 src={frameImg}
                 alt="frame"
-                className="bg-transparent relative  z-10"
+                className="bg-transparent relative z-10"
               />
             </div>
             <div className="hiw-video">
