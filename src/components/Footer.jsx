@@ -1,4 +1,5 @@
 import React from "react";
+import { footerLinks } from "../constants";
 
 const Footer = () => {
   return (
@@ -16,6 +17,24 @@ const Footer = () => {
               other retailer near you {"   "}
             </span>
           </p>
+          <p className="font-semibold text-gray text-xs">
+            or call 000-000-8844
+          </p>
+
+          <div className="bg-neutral-700 my-5 h-[1px] w-full" />
+
+          <div className="flex flex-col md:flex-row    md:items-center justify-between">
+            <div className="flex">
+              {footerLinks.map((link, i) => (
+                <p key={link} className="font-semibold text-gray text-xs">
+                  {link} {"  "}
+                  {i !== footerLinks.length - 1 && (
+                    <span className="mx-2"> | </span>
+                  )}
+                </p>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </footer>
